@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background: #fff9f8;
+    color: #342c2d;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #7c2030;
+    color: white;
+    padding: 14px 20px;
+}
+
+header p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+main {
+    max-width: 900px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #7c2030;
+    font-size: 28px;
+}
