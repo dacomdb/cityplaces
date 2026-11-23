@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>кт3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top wrap">
+    <a class="club-name" href="#top">Гольф-клуб «Фервей»</a>
+    <button type="button" id="menu-button" aria-controls="menu" aria-expanded="false">Меню</button>
+    <nav id="menu" aria-label="Основная навигация" hidden>
+      <a href="#about">О клубе</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#equipment">Оборудование</a>
+      <a href="#price">Стоимость</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="hero-row wrap">
+      <div class="hero-text">
+        <h1>Гольф-клуб<br>«Фервей»</h1>
+        <p>Время, которое принадлежит только вам</p>
+        <a href="#price">Рассчитать стоимость занятия</a>
+      </div>
+      <img src="images/field.jpg" alt="Гольф-поле среди зелёных холмов">
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>О клубе</h2>
+      <p class="intro">«Фервей» — небольшой гольф-клуб. Здесь можно попробовать гольф с инструктором, потренироваться самостоятельно и взять оборудование напрокат.</p>
+      <h3>Как проходит первое занятие</h3>
+      <ol class="steps">
+        <li><strong>Знакомство.</strong> Инструктор объяснит правила и подберёт клюшку.</li>
+        <li><strong>Первые удары.</strong> Попробуете стойку и хват, затем выполните несколько ударов.</li>
+        <li><strong>Игра у лунки.</strong> Потренируетесь катить мяч по траве и попадать в лунку.</li>
+      </ol>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <figure class="slide">
+        <img src="images/field.jpg" alt="Зелёные дорожки гольф-поля и холмы вдали">
+        <figcaption>1 из 4. Гольф-поле</figcaption>
+      </figure>
+      <figure class="slide" hidden>
+        <img src="images/practice.jpg" alt="Коврик для ударов и мячи на тренировочной площадке">
+        <figcaption>2 из 4. Тренировочная зона</figcaption>
+      </figure>
+      <figure class="slide" hidden>
+        <img src="images/clubs-balls.jpg" alt="Гольф-клюшки и мяч на траве">
+        <figcaption>3 из 4. Клюшки и мячи</figcaption>
+      </figure>
+      <figure class="slide" hidden>
+        <img src="images/grounds.jpg" alt="Клубный дом и прилегающая территория">
+        <figcaption>4 из 4. Клубная территория</figcaption>
+      </figure>
+      <button type="button" id="previous">Назад</button>
+      <button type="button" id="next">Вперёд</button>
+    </section>
+
+    <section id="equipment">
+      <h2>Оборудование</h2>
+      <p class="intro">Клюшки, мячи и сумку можно взять напрокат. Наведите на карточку или коснитесь её, чтобы прочитать описание.</p>
+      <div class="cards">
+        <article class="card" tabindex="0">
+          <div class="card-turn">
+            <div class="card-front">
+              <img src="images/club.jpg" alt="Головка гольф-клюшки рядом с мячом">
+              <h3>Гольф-клюшка</h3>
+            </div>
+            <div class="card-back">
+              <h3>Гольф-клюшка</h3>
+              <p>Инструктор подберёт клюшку по росту и покажет, как её держать.</p>
+            </div>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <div class="card-turn">
+            <div class="card-front">
+              <img src="images/ball.jpg" alt="Белый гольф-мяч на траве">
+              <h3>Гольф-мяч</h3>
+            </div>
+            <div class="card-back">
+              <h3>Гольф-мяч</h3>
+              <p>Для отработки ударов на площадке можно взять набор тренировочных мячей.</p>
+            </div>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <div class="card-turn">
+            <div class="card-front">
+              <img src="images/bag.jpg" alt="Сумка с клюшками на гольф-поле">
+              <h3>Гольф-бэг</h3>
+            </div>
+            <div class="card-back">
+              <h3>Гольф-бэг</h3>
+              <p>В сумке удобно носить клюшки, запасные мячи и другие мелочи.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="price">
+      <h2>Стоимость занятия</h2>
+      <p>Укажите длительность и цену часа, чтобы рассчитать общую сумму.</p>
+      <form id="calculator" novalidate>
+        <div class="fields">
+          <label>Количество часов
+            <input id="hours" type="number" step="any" placeholder="Например, 2">
+          </label>
+          <label>Стоимость одного часа, ₽
+            <input id="rate" type="number" step="any" placeholder="Например, 1500">
+          </label>
+        </div>
+        <button type="submit">Рассчитать</button>
+        <p id="total" role="status"></p>
+      </form>
+    </section>
+
+    <section id="faq">
+      <h2>Вопросы</h2>
+      <details name="faq">
+        <summary>Можно ли прийти без опыта?</summary>
+        <p>Да. На первом занятии инструктор объяснит правила, покажет стойку и поможет с первыми ударами.</p>
+      </details>
+      <details name="faq">
+        <summary>Предоставляется ли оборудование?</summary>
+        <p>Да. На время занятия можно взять напрокат клюшки, мячи и сумку.</p>
+      </details>
+      <details name="faq">
+        <summary>Нужна ли специальная одежда?</summary>
+        <p>Для тренировки подойдут удобная одежда по погоде и закрытая обувь без каблуков.</p>
+      </details>
+      <details name="faq">
+        <summary>Можно ли записаться на индивидуальное занятие?</summary>
+        <p>Да. На индивидуальном занятии можно начать с азов или разобрать отдельный удар с инструктором.</p>
+      </details>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <h3>Обратная связь</h3>
+      <form id="feedback">
+        <div class="fields">
+          <label>Имя
+            <input id="visitor-name" type="text" autocomplete="name" required>
+          </label>
+          <label>Email
+            <input id="visitor-email" type="email" autocomplete="email" required>
+          </label>
+        </div>
+        <label>Сообщение
+          <textarea id="message" rows="3" required></textarea>
+        </label>
+        <button type="submit">Посмотреть черновик</button>
+        <p id="draft" role="status" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Гольф-клуб «Фервей»</strong>
+      <nav aria-label="Навигация в подвале">
+        <a href="#about">О клубе</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#equipment">Оборудование</a>
+        <a href="#price">Стоимость</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
